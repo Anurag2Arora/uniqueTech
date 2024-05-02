@@ -1,0 +1,81 @@
+<div class="table">
+<div class="inbtn">
+  <label >search</label>
+  <input type="text" placeholder="search">
+  <button mat-raised-button color="primary" (click)="opendialog()">ADD</button>
+</div>
+<!-- <button mat-raised-button color="warn" (click)="opendialog()">PDF</button>
+<button mat-raised-button color="primary" (click)="opendialog()">EXCEL</button> -->
+  <h2>User List</h2>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+  <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef> username </th>
+      <td mat-cell *matCellDef="let element"> <div class="name">{{element.username}} </div></td>
+    </ng-container>
+    <ng-container matColumnDef="creditref">
+      <th mat-header-cell *matHeaderCellDef> Credit Reference </th>
+      <td mat-cell *matCellDef="let element"> {{element.creditref}} </td>
+    </ng-container>
+    <ng-container matColumnDef="balance">
+      <th mat-header-cell *matHeaderCellDef> Balance </th>
+      <td mat-cell *matCellDef="let element"> {{element.balance}} </td>
+    </ng-container>
+    <ng-container matColumnDef="client">
+      <th mat-header-cell *matHeaderCellDef> Client(p/L)</th>
+      <td mat-cell *matCellDef="let element"> {{element.client}} </td>
+    </ng-container>
+    <ng-container matColumnDef="my">
+      <th mat-header-cell *matHeaderCellDef> My(p/L)</th>
+      <td mat-cell *matCellDef="let element"> {{element.my}} </td>
+    </ng-container>
+    <ng-container matColumnDef="exposure">
+      <th mat-header-cell *matHeaderCellDef> Exposure(p/L)</th>
+      <td mat-cell *matCellDef="let element"> {{element.exposure}} </td>
+    </ng-container>
+    <ng-container matColumnDef="availablebal">
+      <th mat-header-cell *matHeaderCellDef> Available Balance(p/L)</th>
+      <td mat-cell *matCellDef="let element"> {{element.availablebal}} </td>
+    </ng-container>
+    <ng-container matColumnDef="ust">
+      <th mat-header-cell *matHeaderCellDef> U st</th>
+      <td mat-cell *matCellDef="let element"> <div class="rightmark">{{element.ust}} </div></td>
+    </ng-container>
+    <ng-container matColumnDef="bst">
+      <th mat-header-cell *matHeaderCellDef> B st</th>
+      <td mat-cell *matCellDef="let element"> <div class="rightmark">{{element.bst}}</div> </td>
+    </ng-container>
+    <ng-container matColumnDef="default">
+      <th mat-header-cell *matHeaderCellDef> Default %</th>
+      <td mat-cell *matCellDef="let element"> {{element.default}} </td>
+    </ng-container>
+    <ng-container matColumnDef="account">
+      <th mat-header-cell *matHeaderCellDef> Accout type</th>
+      <td mat-cell *matCellDef="let element"> {{element.account}} </td>
+    </ng-container>
+    <ng-container matColumnDef="casino">
+      <th mat-header-cell *matHeaderCellDef> casino Total</th>
+      <td mat-cell *matCellDef="let element"> {{element.casino}} </td>
+    </ng-container>
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action</th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-raised-button
+        matTooltip="Info about the action"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+  Action
+</button>
+        <button>{{element.action}}</button> </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
+
+</div>

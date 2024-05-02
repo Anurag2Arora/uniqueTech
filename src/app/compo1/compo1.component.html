@@ -1,0 +1,24 @@
+<div class="margin">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data | paginate:{itemsPerPage:psize,currentPage:cpage}">
+        <th >{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.add}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    <pagination-controls (pageChange)="cpage=$event"></pagination-controls>
+  
+

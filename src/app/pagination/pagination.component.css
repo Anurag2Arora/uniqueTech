@@ -1,0 +1,54 @@
+
+@media only screen and (max-width: 600px) {
+th {
+  font-size: 5px;
+  }
+  .table{
+    width: 100px;
+  }
+}
+/* /////////////////////////////////////////////////////////////////////////////////// */
+table {
+    width: 100%;
+  }
+  th{
+    font-weight: bold;
+    color: black;
+    border-bottom: 3px solid black;
+  }
+  tr:nth-child(even) {
+    background: rgb(232, 229, 229);
+  }
+input{
+  height: 30px;
+}
+  .inbtn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+  }
+  .name{
+    margin: 5px 0;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(53, 49, 49);
+    color: white;
+    border-radius: 5px;
+  }
+  .rightmark{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(53, 49, 49);
+    color: white;
+  }
+  @media only screen and (max-width: 600px) {
+   
+  }
